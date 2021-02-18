@@ -8,9 +8,122 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:rowCount="2"
+            android:columnCount="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#CCCACA"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="확진환자"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#CCCACA"
+                    android:text="검사중"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#CCCACA"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="격리해제"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#CCCACA"
+                    android:gravity="center"
+                    android:text="사망자"/>
+            </LinearLayout>
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/medicine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radius_left"
+                android:gravity="center"
+                android:text="일반확진자"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+            <TextView
+                android:id="@+id/government_support"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radius_left"
+                android:gravity="center"
+                android:text="국내발생"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+            <TextView
+                android:id="@+id/social_distancing"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radius_left"
+                android:gravity="center"
+                android:text="해외유입"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#D13B52"
         android:layout_alignParentBottom="true"
+        android:background="#D13B52"
         android:orientation="horizontal">
 
         <TextView
