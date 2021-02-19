@@ -171,21 +171,21 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/domestic_btn"
+            android:id="@+id/accumulate_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="국내현황"
+            android:text="누적확진"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/overseas_btn"
+            android:id="@+id/new_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="해외현황"
+            android:text="신규확진"
             android:textSize="20dp" />
 
         <TextView
