@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.util.Linkify
-import kotlinx.android.synthetic.main.activity_precaution.domestic_btn
-import kotlinx.android.synthetic.main.activity_precaution.overseas_btn
+import kotlinx.android.synthetic.main.activity_precaution.accumulate_btn
+import kotlinx.android.synthetic.main.activity_precaution.new_btn
 import kotlinx.android.synthetic.main.activity_precaution.source
 import kotlinx.android.synthetic.main.activity_precaution.summary_btn
 import java.util.regex.Matcher
@@ -19,11 +19,11 @@ class PrecautionActivity : AppCompatActivity() {
         summary_btn.setOnClickListener {
             startActivity(Intent(this,SummaryActivity::class.java))
         }
-        domestic_btn.setOnClickListener {
-            startActivity(Intent(this,DomesticStatusActivity::class.java))
+        accumulate_btn.setOnClickListener {
+            startActivity(Intent(this,AccumulateActivity::class.java))
         }
-        overseas_btn.setOnClickListener {
-            startActivity(Intent(this,OverseasStatusActivity::class.java))
+        new_btn.setOnClickListener {
+            startActivity(Intent(this,NewActivity::class.java))
         }
 
         val transform = Linkify.TransformFilter(object : Linkify.TransformFilter, (Matcher, String) -> String {

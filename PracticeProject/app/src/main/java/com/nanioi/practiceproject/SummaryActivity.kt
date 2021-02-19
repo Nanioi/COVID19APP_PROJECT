@@ -13,11 +13,11 @@ class SummaryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_summary)
 
-        domestic_btn.setOnClickListener {
-            startActivity(Intent(this, DomesticStatusActivity::class.java))
+        accumulate_btn.setOnClickListener {
+            startActivity(Intent(this, AccumulateActivity::class.java))
         }
-        overseas_btn.setOnClickListener {
-            startActivity(Intent(this, OverseasStatusActivity::class.java))
+        new_btn.setOnClickListener {
+            startActivity(Intent(this, NewActivity::class.java))
         }
         precaution_btn.setOnClickListener {
             startActivity(Intent(this, PrecautionActivity::class.java))
