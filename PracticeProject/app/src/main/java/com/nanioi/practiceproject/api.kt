@@ -1,5 +1,7 @@
 package com.nanioi.practiceproject
 
+// xml 파싱방법
+
 //import android.os.Build
 //import androidx.annotation.RequiresApi
 //import org.w3c.dom.Document
