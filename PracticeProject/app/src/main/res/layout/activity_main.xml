@@ -7,6 +7,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/xml_parse"
+            android:padding="20dp"/>
+
+    </ScrollView>
+
 
 
 </LinearLayout>
