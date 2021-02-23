@@ -19,6 +19,6 @@ class NewActivity : AppCompatActivity() {
         precaution_btn.setOnClickListener {
             startActivity(Intent(this, PrecautionActivity::class.java))
         }
-        XmlParsingTask(decide,decide_new,exam,exam_new,clear,clear_new,death,death_new,state_dt,state_time,accumulate_chart).execute()
+        XmlParsingTask(decide,decide_new,exam,exam_new,clear,clear_new,death,death_new,state_dt,state_time,new_chart).execute()
     }
 }
