@@ -57,7 +57,7 @@ class AccumulateActivity : AppCompatActivity() {
             state_dt.setText(data.stateDt)
             state_time.setText(data.stateTime)
 
-            setLineChart(accumulate_chart,result)
+            setLineChart(accumulate_chart,result,this@AccumulateActivity)
         }
         override fun doInBackground(vararg params: Any?): List<ResponseElement> {
             return readFeed(parsingData())
