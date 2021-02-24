@@ -57,7 +57,7 @@ class NewActivity : AppCompatActivity() {
             state_dt.setText(data.stateDt)
             state_time.setText(data.stateTime)
 
-            setBarChart(new_chart, result)
+            setBarChart(new_chart, result,this@NewActivity)
         }
         override fun doInBackground(vararg params: Any?): List<ResponseElement> {
             return readFeed(parsingData())

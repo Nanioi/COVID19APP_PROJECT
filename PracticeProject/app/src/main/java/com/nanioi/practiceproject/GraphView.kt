@@ -5,13 +5,14 @@ import android.util.Log
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.Legend
+import com.github.mikephil.charting.components.MarkerView
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.ValueFormatter
 import java.text.SimpleDateFormat
 
-fun setLineChart(lineChart: LineChart, result: List<ResponseElement>) {
+fun setLineChart(lineChart: LineChart, result: List<ResponseElement>,activity: AccumulateActivity) {
     val Chart = lineChart
     Chart.invalidate()
     Chart.clear()
@@ -26,8 +27,8 @@ fun setLineChart(lineChart: LineChart, result: List<ResponseElement>) {
     var c = 0f
     var size : Int = result.size
     size-=1
-    var step_cnt : Int = size/6
-    for (i in size downTo 0 step step_cnt) {
+
+    for (i in size downTo 0) {
         decide = result[i].decideCnt!!
         clear = result[i].clearCnt!!
         decide_value.add(Entry(c, decide.toFloat()))
@@ -41,12 +42,14 @@ fun setLineChart(lineChart: LineChart, result: List<ResponseElement>) {
         axisDependency = YAxis.AxisDependency.LEFT //  y값을 왼쪽으로
         color = Color.RED
         setCircleColor(getColor(Color.RED)) // 데이터 원색
-        valueTextSize = 10f
-        lineWidth = 2f
-        circleRadius = 3f // 원크기
+//        valueTextSize = 10f
+        lineWidth = 1f
+        circleRadius = 1f // 원크기
         fillAlpha = 0 // 라인 색 투명도
         fillColor = getColor(Color.RED) // 라인색
         highLightColor = Color.BLACK
+        highlightLineWidth = 1f
+        valueTextSize = 0f
         setDrawValues(true)
     }
     var lineDataSet2: LineDataSet = LineDataSet(clear_value, "격리해제")
@@ -54,18 +57,21 @@ fun setLineChart(lineChart: LineChart, result: List<ResponseElement>) {
         axisDependency = YAxis.AxisDependency.LEFT //  y값을 왼쪽으로
         color = Color.BLUE
         setCircleColor(getColor(Color.BLUE)) // 데이터 원색
-        valueTextSize = 10f
         lineWidth = 2f
-        circleRadius = 3f // 원크기
+        circleRadius = 1f // 원크기
         fillAlpha = 0 // 라인 색 투명도
         fillColor = getColor(Color.BLUE) // 라인색
         highLightColor = Color.BLACK
+        highlightLineWidth = 1f
+        valueTextSize = 0f
         setDrawValues(true)
     }
 
     var lineData = LineData() // linedataset을 담는 그릇, 여러개의 라인데이터가 들어갈수 있음
     lineData.addDataSet(lineDataSet1)
     lineData.addDataSet(lineDataSet2)
+    lineData.setValueTextSize(3f)
+
 
     val xAxis = lineChart.xAxis
     xAxis.apply {
@@ -75,12 +81,13 @@ fun setLineChart(lineChart: LineChart, result: List<ResponseElement>) {
         granularity = 1f // x축 데이터 표시 간격
         isGranularityEnabled = true // x축 간격을 제한하는 세분화 기능
         setValueFormatter(object : ValueFormatter() {
-            val pattern = "MM/dd"
+            val pattern = "yy/MM/dd"
             private val mFormat = SimpleDateFormat(pattern)
             private val inputFormat = SimpleDateFormat("yyyyMMdd")
             override fun getFormattedValue(value: Float): String {
                 val intValue: Int = value.toInt()
                 if (intValue < 0 || intValue >=  xLabel.size) return ""
+                else if(intValue%100!=0) return ""
                 else return mFormat.format(inputFormat.parse(xLabel[intValue]))
             }
         })
@@ -97,9 +104,11 @@ fun setLineChart(lineChart: LineChart, result: List<ResponseElement>) {
             setDrawInside(false) // 차트안에 그릴것인지
         }
     }
+    val marker : MarkerView = MyMarkerView(activity, layoutResource = R.layout.maker)
+    lineChart.marker = marker
     lineChart.data = lineData
 }
-fun setBarChart(barChart: BarChart, result: List<ResponseElement>) {
+fun setBarChart(barChart: BarChart, result: List<ResponseElement>,activity:NewActivity) {
     val Chart = barChart
     Chart.invalidate()
     Chart.clear()
@@ -125,6 +134,7 @@ fun setBarChart(barChart: BarChart, result: List<ResponseElement>) {
     dataSet.apply {
         axisDependency = YAxis.AxisDependency.LEFT
         setDrawValues(true)
+        valueTextSize = 0f
     }
 
     var barDate = BarData()
@@ -161,5 +171,7 @@ fun setBarChart(barChart: BarChart, result: List<ResponseElement>) {
             setDrawInside(false) // 차트안에 그릴것인지
         }
     }
+    val marker : MarkerView = MyMarkerView(activity, layoutResource = R.layout.maker)
+    barChart.marker = marker
     barChart.data = barDate
 }
