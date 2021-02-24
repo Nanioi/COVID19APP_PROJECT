@@ -33,48 +33,35 @@ class NewActivity : AppCompatActivity() {
         precaution_btn.setOnClickListener {
             startActivity(Intent(this, PrecautionActivity::class.java))
         }
-        new_XmlParsingTask(decide, decide_new, exam, exam_new, clear, clear_new, death, death_new, state_dt, state_time, new_chart).execute()
+        new_XmlParsingTask().execute()
     }
-}
+    inner class new_XmlParsingTask() : AsyncTask<Any?, Any?, List<ResponseElement>>() {
+        override fun onPostExecute(result: List<ResponseElement>) {
+            super.onPostExecute(result)
 
-class new_XmlParsingTask(
-        val decide: TextView,
-        val decide_new: TextView,
-        val exam: TextView,
-        val exam_new: TextView,
-        val clear: TextView,
-        val clear_new: TextView,
-        val death: TextView,
-        val death_new: TextView,
-        val state_dt: TextView,
-        val state_time: TextView,
-        val chart: BarChart
-) : AsyncTask<Any?, Any?, List<ResponseElement>>() {
-    override fun onPostExecute(result: List<ResponseElement>) {
-        super.onPostExecute(result)
+            val data: ResponseElement = result[0]
+            val data_prev: ResponseElement = result[1]
+            val decide_new_cnt = ((data.decideCnt!!).toInt() - (data_prev.decideCnt!!).toInt()).toString()
+            val exam_new_cnt = ((data.examCnt!!).toInt() - (data_prev.examCnt!!).toInt()).toString()
+            val clear_new_cnt = ((data.clearCnt!!).toInt() - (data_prev.clearCnt!!).toInt()).toString()
+            val death_new_cnt = ((data.deathCnt!!).toInt() - (data_prev.deathCnt!!).toInt()).toString()
 
-        val data: ResponseElement = result[0]
-        val data_prev: ResponseElement = result[1]
-        val decide_new_cnt = ((data.decideCnt!!).toInt() - (data_prev.decideCnt!!).toInt()).toString()
-        val exam_new_cnt = ((data.examCnt!!).toInt() - (data_prev.examCnt!!).toInt()).toString()
-        val clear_new_cnt = ((data.clearCnt!!).toInt() - (data_prev.clearCnt!!).toInt()).toString()
-        val death_new_cnt = ((data.deathCnt!!).toInt() - (data_prev.deathCnt!!).toInt()).toString()
+            decide.setText(data.decideCnt)
+            decide_new.setText("+" + decide_new_cnt)
+            exam.setText(data.examCnt)
+            exam_new.setText(exam_new_cnt)
+            clear.setText(data.clearCnt)
+            clear_new.setText("+" + clear_new_cnt)
+            death.setText(data.deathCnt)
+            death_new.setText("+" + death_new_cnt)
+            state_dt.setText(data.stateDt)
+            state_time.setText(data.stateTime)
 
-        decide.setText(data.decideCnt)
-        decide_new.setText("+" + decide_new_cnt)
-        exam.setText(data.examCnt)
-        exam_new.setText(exam_new_cnt)
-        clear.setText(data.clearCnt)
-        clear_new.setText("+" + clear_new_cnt)
-        death.setText(data.deathCnt)
-        death_new.setText("+" + death_new_cnt)
-        state_dt.setText(data.stateDt)
-        state_time.setText(data.stateTime)
+            setBarChart(new_chart, result)
+        }
 
-        setBarChart(chart, result)
-    }
-
-    override fun doInBackground(vararg params: Any?): List<ResponseElement> {
-        return readFeed(parsingData())
+        override fun doInBackground(vararg params: Any?): List<ResponseElement> {
+            return readFeed(parsingData())
+        }
     }
 }

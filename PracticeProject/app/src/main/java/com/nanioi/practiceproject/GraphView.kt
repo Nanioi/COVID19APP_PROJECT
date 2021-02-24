@@ -36,8 +36,6 @@ fun setLineChart(lineChart: LineChart, result: List<ResponseElement>) {
         statedt = result[i].stateDt!!
         xLabel.add(statedt)
     }
-    Log.d  (  "ddd"  ,"xLabel : "+xLabel)
-    Log.d  (  "ddd"  ,"new_decide_value : " + decide_value)
     var lineDataSet1: LineDataSet = LineDataSet(decide_value, "누적확진")
     lineDataSet1.apply {
         axisDependency = YAxis.AxisDependency.LEFT //  y값을 왼쪽으로
@@ -76,15 +74,6 @@ fun setLineChart(lineChart: LineChart, result: List<ResponseElement>) {
         setDrawGridLines(false) //배경 그리드 라인 세팅
         granularity = 1f // x축 데이터 표시 간격
         isGranularityEnabled = true // x축 간격을 제한하는 세분화 기능
-//        setValueFormatter(object : ValueFormatter() {
-//            val pattern = "MM/dd"
-//            val mFormat = SimpleDateFormat(pattern)
-//            var inputFormat = SimpleDateFormat("yyyyMMdd")
-//
-//            @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
-//            override fun getFormattedValue(value: Float): String =
-//                    mFormat.format(inputFormat.parse(xLabel[value.toInt()]))
-//        })
         setValueFormatter(object : ValueFormatter() {
             val pattern = "MM/dd"
             private val mFormat = SimpleDateFormat(pattern)
