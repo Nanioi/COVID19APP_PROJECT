@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeProject"
         android:usesCleartextTraffic="true">
-<!--        <activity android:name=".XmlParser"></activity>-->
+
         <activity android:name=".PrecautionActivity"></activity>
         <activity android:name=".NewActivity" />
         <activity android:name=".AccumulateActivity" />
