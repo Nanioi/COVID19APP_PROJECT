@@ -1,9 +1,11 @@
 package com.nanioi.practiceproject
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.util.Linkify
+import android.view.Gravity.apply
 import kotlinx.android.synthetic.main.activity_summary.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -22,7 +24,19 @@ class SummaryActivity : AppCompatActivity() {
         precaution_btn.setOnClickListener {
             startActivity(Intent(this, PrecautionActivity::class.java))
         }
-
+        medicine.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&query=" +
+                    "%EC%BD%94%EB%A1%9C%EB%82%9819%20%EC%84%A0%EB%B3%84%EC%A7%84%EB%A3%8C%EC%86%8C")) // ACTION_VIEW => 뒤에것을 보여줘라
+            startActivity(intent)
+        }
+        government_support.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gov.kr/portal/coronaPolicy/list/svc/indvdl")) // ACTION_VIEW => 뒤에것을 보여줘라
+            startActivity(intent)
+        }
+        vaccination.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://ncv.kdca.go.kr/content/cardnews_06.html")) // ACTION_VIEW => 뒤에것을 보여줘라
+            startActivity(intent)
+        }
         //특정 문자열에 링크연결
         val transform = Linkify.TransformFilter(object : Linkify.TransformFilter, (Matcher, String) -> String {
             override fun transformUrl(p0: Matcher?, p1: String?): String {
@@ -46,14 +60,13 @@ class SummaryActivity : AppCompatActivity() {
         val pattern11 = Pattern.compile("중앙사고수습본부")
         val pattern12 = Pattern.compile("중앙방역대책본부")
         val pattern13 = Pattern.compile("Johns Hopkins CSSE")
+        val pattern14 = Pattern.compile("백신종류별 특성")
+        val pattern15 = Pattern.compile("안전성 및 주의사항")
+
+
 
         Linkify.addLinks(justice, pattern1, "https://terms.naver.com/entry.nhn?docId=5912275&cid=43667&categoryId=43667", null, transform)
         Linkify.addLinks(check, pattern1, "https://terms.naver.com/entry.nhn?docId=5916219&cid=66630&categoryId=66630#TABLE_OF_CONTENT3", null, transform)
-        Linkify.addLinks(treatment, pattern1,
-                "https://terms.naver.com/entry.nhn?docId=5916219&cid=66630&categoryId=66630#TABLE_OF_CONTENT4",
-                null,
-                transform
-        )
         Linkify.addLinks(emergency_number, pattern2,
                 "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&query=%EC%BD%94%EB%A1%9C%EB%82%9819%20%EC%84%A0%EB%B3%84%EC%A7%84%EB%A3%8C%EC%86%8C",
                 null,
@@ -111,6 +124,16 @@ class SummaryActivity : AppCompatActivity() {
         )
         Linkify.addLinks(source, pattern13,
                 "https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6",
+                null,
+                transform
+        )
+        Linkify.addLinks(treatment, pattern14,
+                "http://152.99.73.154/error.html#TABLE_OF_CONTENT4",
+                null,
+                transform
+        )
+        Linkify.addLinks(treatment, pattern15,
+                "http://ncv.kdca.go.kr/content/qna_01_03.html#TABLE_OF_CONTENT4",
                 null,
                 transform
         )
