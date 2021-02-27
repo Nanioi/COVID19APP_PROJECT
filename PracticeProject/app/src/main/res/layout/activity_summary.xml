@@ -25,7 +25,7 @@
                     android:text="정의" />
                 <TextView
                     android:id="@+id/justice"
-                    android:text="2019년 12월 중국 우한에서 처음 발생한 뒤 전 세계로 확산된, 새로운 유형의 코로나바이러스에 의한 \n호흡기 감염질환. 더보기"
+                    android:text="2019년 12월 중국 우한에서 처음 발생한 뒤 전 세계로 확산된, 새로운 유형의 코로나바이러스에 의한 호흡기 감염질환. 더보기"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
@@ -34,7 +34,7 @@
                 <TextView
                     android:text="증상" />
                 <TextView
-                    android:text="발열, 권태감, 기침, 호흡곤란 및 폐렴 등 경증에서 중증까지 다양한 호흡기감염증이 나타남. 그 외 \n가래, 인후통, 두통, 객혈과 오심, 설사 등도 나타남"
+                    android:text="발열, 권태감, 기침, 호흡곤란 및 폐렴 등 경증에서 중증까지 다양한 호흡기감염증이 나타남. 그 외 가래, 인후통, 두통, 객혈과 오심, 설사 등도 나타남"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
@@ -53,10 +53,10 @@
             <TableRow
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:text="치료" />
+                    android:text="백신" />
                 <TextView
                     android:id="@+id/treatment"
-                    android:text="대증 치료로 증상을 완화시킬 수 있지만, 아직까지 질병을 예방하거나 치료하는 것으로 확실하게 밝혀진 특이 치료제는 없음. 더보기"
+                    android:text="전 국민을 대상으로 접종하되, 접종순서 및 백신의 공급 상황에 맞춰 차례대로 접종. \n백신종류별 특성, 안전성 및 주의사항"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
@@ -68,7 +68,7 @@
                     android:layout_marginRight="10dp"/>
                 <TextView
                     android:id="@+id/emergency_number"
-                    android:text="가까운 선별 진료소, 관할 보건소, 지역콜센터120, \n콜센터 1339"
+                    android:text="가까운 선별 진료소, 관할 보건소, 지역콜센터120, 콜센터 1339"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
@@ -125,9 +125,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="사회적 거리두기"
+                android:text="코로나19예방접종"
                 android:textStyle="bold"
-                android:id="@+id/social_distancing"
+                android:id="@+id/vaccination"
                 android:background="@drawable/radius_left"/>
 
         </LinearLayout>

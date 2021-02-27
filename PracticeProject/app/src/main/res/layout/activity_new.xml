@@ -169,15 +169,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:orientation="horizontal"
             android:layout_marginBottom="15dp">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/radius_left">
 
                 <TextView
                     android:layout_width="80dp"
@@ -190,6 +191,8 @@
                 <LinearLayout
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/state_dt"
@@ -218,24 +221,25 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_height="match_parent"
                 android:background="@drawable/radius_left"
                 android:orientation="horizontal">
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/refresh"
+                    android:id="@+id/calendar_btn"
                     android:background="#00ff0000"
                     android:textColor="#727273"
                     android:textStyle="bold"
-                    android:text="새로고침" />
+                    android:text="날짜설정" />
 
             </LinearLayout>
 
 
         </LinearLayout>
+
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/new_chart"

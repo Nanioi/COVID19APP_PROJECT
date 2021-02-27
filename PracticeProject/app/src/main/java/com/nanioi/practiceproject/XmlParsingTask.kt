@@ -40,14 +40,24 @@ data class ResponseElement(
         val stateDt: String?,
         val stateTime: String?
 )
-fun parsingData(): XmlPullParser {
 
-    var apiKey = "Tdo19TVJxANWay1HQ1dxcwGA5sJ73wYF%2FVfvQaLyA1iBPWkttg74N9jzEUDGlG6J3ItutuWKuzOutjEblPuQIg%3D%3D"
+fun parsingData(setdt : Int): XmlPullParser {
+
+    var dt : Int = 0
+    val cal = Calendar.getInstance()
+    dt += cal.get(Calendar.YEAR)
+    dt *= 100
+    dt += cal.get((Calendar.MONTH)+1)
+    dt *= 100
+    dt += cal.get(Calendar.DATE)
+
+    val apiKey = "Tdo19TVJxANWay1HQ1dxcwGA5sJ73wYF%2FVfvQaLyA1iBPWkttg74N9jzEUDGlG6J3ItutuWKuzOutjEblPuQIg%3D%3D"
     var pageNo = "1"
     val numOfRows = "10"
     val startCreateDt: String = "20200310"
-    val endCreateDt: String = "20210222"
+    var endCreateDt: String = dt.toString()
 
+    if(setdt !=0)  endCreateDt  = setdt.toString()
     var keyDecode = URLDecoder.decode(apiKey, "UTF-8")
     val urlBuilder = StringBuilder("http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson") /*URL*/
     urlBuilder.append("?" + URLEncoder.encode("serviceKey", "UTF-8") + "=" + URLEncoder.encode(keyDecode, "UTF-8")) /*공공데이터포털에서 받은 인증키*/
@@ -65,6 +75,7 @@ fun parsingData(): XmlPullParser {
 
     return parser
 }
+
 @Throws(XmlPullParserException::class, IOException::class)
 fun readFeed(parser: XmlPullParser): List<ResponseElement> {
     val entries = mutableListOf<ResponseElement>()
