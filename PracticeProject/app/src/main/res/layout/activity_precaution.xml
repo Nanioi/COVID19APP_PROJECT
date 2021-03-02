@@ -167,16 +167,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="누적확진"
+            android:text="현황"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/new_btn"
+            android:id="@+id/predic_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="신규확진"
+            android:text="예상"
             android:textSize="20dp" />
 
         <TextView

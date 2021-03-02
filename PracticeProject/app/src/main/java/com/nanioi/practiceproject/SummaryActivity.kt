@@ -5,7 +5,6 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.util.Linkify
-import android.view.Gravity.apply
 import kotlinx.android.synthetic.main.activity_summary.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -18,8 +17,8 @@ class SummaryActivity : AppCompatActivity() {
         accumulate_btn.setOnClickListener {
             startActivity(Intent(this, AccumulateActivity::class.java))
         }
-        new_btn.setOnClickListener {
-            startActivity(Intent(this, NewActivity::class.java))
+        predic_btn.setOnClickListener {
+            startActivity(Intent(this, PredictionActivity::class.java))
         }
         precaution_btn.setOnClickListener {
             startActivity(Intent(this, PrecautionActivity::class.java))

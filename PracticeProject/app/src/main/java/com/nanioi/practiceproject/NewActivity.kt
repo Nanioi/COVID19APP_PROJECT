@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.DatePicker
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_new.*
+
 import java.util.*
 
 class NewActivity : AppCompatActivity() {
@@ -20,6 +21,9 @@ class NewActivity : AppCompatActivity() {
         }
         accumulate_btn.setOnClickListener {
             startActivity(Intent(this, AccumulateActivity::class.java))
+        }
+        predic_btn.setOnClickListener {
+            startActivity(Intent(this, PredictionActivity::class.java))
         }
         precaution_btn.setOnClickListener {
             startActivity(Intent(this, PrecautionActivity::class.java))
@@ -41,6 +45,9 @@ class NewActivity : AppCompatActivity() {
                 }
             }, year, month, date)
             dlg.show()
+        }
+        acc_act_btn.setOnClickListener {
+            startActivity(Intent(this, AccumulateActivity::class.java))
         }
         new_XmlParsingTask().execute()
     }
