@@ -15,7 +15,7 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="145dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal"
             android:rowCount="2"
             android:columnCount="1">
@@ -91,6 +91,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
@@ -171,14 +172,14 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="25dp">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="@drawable/radius_left">
+                android:background="@drawable/red_border">
 
                 <TextView
                     android:layout_width="80dp"
@@ -223,7 +224,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:background="@drawable/radius_left"
+                android:background="@drawable/red_radius"
                 android:orientation="horizontal">
 
                 <Button
@@ -231,7 +232,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/calendar_btn"
                     android:background="#00ff0000"
-                    android:textColor="#727273"
+                    android:textColor="#ffffff"
                     android:textStyle="bold"
                     android:text="날짜설정" />
 
