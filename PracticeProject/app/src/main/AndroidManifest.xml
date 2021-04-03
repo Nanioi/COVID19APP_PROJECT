@@ -14,23 +14,16 @@
         android:theme="@style/Theme.PracticeProject"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".PrecautionActivity"
-            android:theme="@style/Theme.PracticeProject.NoActionBar"></activity>
-        <activity android:name=".NewActivity"
-            android:theme="@style/Theme.PracticeProject.NoActionBar"/>
-        <activity android:name=".AccumulateActivity"
-            android:theme="@style/Theme.PracticeProject.NoActionBar"/>
-        <activity android:name=".SummaryActivity"
-            android:theme="@style/Theme.PracticeProject.NoActionBar">
+        <activity android:name=".PrecautionActivity"></activity>
+        <activity android:name=".NewActivity" />
+        <activity android:name=".AccumulateActivity" />
+        <activity android:name=".SummaryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.PracticeProject.NoActionBar">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

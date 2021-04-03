@@ -20,55 +20,55 @@
             android:padding="16dp">
 
             <TableRow
-                android:layout_marginBottom="15dp">
+                android:layout_marginBottom="10dp">
                 <TextView
                     android:text="정의" />
                 <TextView
                     android:id="@+id/justice"
-                    android:text="2019년 12월 중국 우한에서 처음 발생한 뒤 전 세계로 확산된,  새로운 유형의 코로나바이러스에 의한 \n호흡기 감염질환.  더보기"
+                    android:text="2019년 12월 중국 우한에서 처음 발생한 뒤 전 세계로 확산된,  새로운 유형의 코로나바이러스에 의한 호흡기 감염질환. 더보기"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
             <TableRow
-                android:layout_marginBottom="15dp">
+                android:layout_marginBottom="10dp">
                 <TextView
                     android:text="증상" />
                 <TextView
-                    android:text="발열, 권태감, 기침, 호흡곤란 및 폐렴 등 경증에서 중증까지 다양한 호흡기감염증이 나타남. \n그 외 가래, 인후통, 두통, 객혈과 오심, 설사 등"
+                    android:text="발열, 권태감, 기침, 호흡곤란 및 폐렴 등 경증에서 중증까지 다양한 호흡기감염증이 나타남. 그 외 가래, 인후통, 두통, 객혈과 오심, 설사 등도 나타남"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
 
             <TableRow
-                android:layout_marginBottom="15dp">
+                android:layout_marginBottom="10dp">
                 <TextView
                     android:text="검사" />
                 <TextView
                     android:id="@+id/check"
-                    android:text="필수검체는 상기도 검체이며, 하기도 검체는 가래가 있는 환자에서 채취. 검체는 의사, 간호사, 임상병리사가 지정된 장소(선별진료소 등)에서 채취함.  더보기 "
+                    android:text="필수검체는 상기도 검체이며, 하기도 검체는 가래가 있는 환자에서 채취. 검체는 의사, 간호사, 임상병리사가 지정된 장소\n(선별진료소 등)에서 채취함. 더보기 "
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
 
             <TableRow
-                android:layout_marginBottom="15dp">
+                android:layout_marginBottom="10dp">
                 <TextView
                     android:text="백신" />
                 <TextView
                     android:id="@+id/treatment"
-                    android:text="전 국민을 대상으로 접종하되, 접종순서 및 백신의 \n공급 상황에 맞춰 차례대로 접종. 백신종류별 특성, \n안전성 및 주의사항"
+                    android:text="전 국민을 대상으로 접종하되, 접종순서 및 백신의 공급 상황에 맞춰 차례대로 접종. 백신종류별 특성, 안전성 및 주의사항"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
 
             <TableRow
-                android:layout_marginBottom="15dp">
+                android:layout_marginBottom="10dp">
                 <TextView
                     android:text="긴급연락처"
                     android:layout_marginRight="10dp"/>
                 <TextView
                     android:id="@+id/emergency_number"
-                    android:text="가까운 선별 진료소, 관할 보건소, 지역콜센터120, \n콜센터 1339"
+                    android:text="가까운 선별 진료소, 관할 보건소, 지역콜센터120, 콜센터 1339"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
@@ -133,7 +133,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-8dp"
+            android:layout_marginTop="-10dp"
             android:orientation="vertical">
 
             <TextView
@@ -146,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/source"
-                android:text="출처             중앙재난안전대책본부, 중앙사고수습본부, \n                     중앙방역대책본부, Johns Hopkins CSSE"
+                android:text="출처      중앙재난안전대책본부, 중앙사고수습본부, \n              중앙방역대책본부, Johns Hopkins CSSE"
                 android:textStyle="bold"
                 android:layout_marginTop="-30dp"
                 android:padding="25dp"/>

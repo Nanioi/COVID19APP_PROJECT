@@ -231,7 +231,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/calendar_btn"
                     android:background="#00ff0000"
-                    android:textColor="#727273"
+                    android:textColor="#ffffff"
                     android:textStyle="bold"
                     android:text="날짜설정" />
 
