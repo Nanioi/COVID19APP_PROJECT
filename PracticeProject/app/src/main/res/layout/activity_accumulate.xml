@@ -169,7 +169,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="71dp"
+            android:layout_height="70dp"
             android:orientation="horizontal"
             android:layout_marginBottom="15dp">
 
@@ -178,7 +178,7 @@
                 android:layout_weight="2"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="@drawable/border">
+                android:background="@drawable/radius_left">
 
                 <TextView
                     android:layout_width="80dp"
@@ -223,30 +223,17 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:background="@drawable/radius_left"
+                android:orientation="horizontal">
 
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
+                    android:layout_height="match_parent"
                     android:id="@+id/calendar_btn"
-                    android:textColor="#FFFFFF"
+                    android:background="#00ff0000"
+                    android:textColor="#727273"
                     android:textStyle="bold"
-                    android:text="날짜설정"
-                    android:textSize="13dp"
-                    android:background="@drawable/radius_left"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#ffffff" />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:id="@+id/new_act_btn"
-                    android:background="@drawable/radius_left"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:text="신규확진현황"
-                    android:textSize="13dp"/>
+                    android:text="날짜설정" />
 
             </LinearLayout>
 
@@ -282,16 +269,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="현황"
+            android:text="누적확진"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/predic_btn"
+            android:id="@+id/new_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="예상"
+            android:text="신규확진"
             android:textSize="20dp" />
 
         <TextView

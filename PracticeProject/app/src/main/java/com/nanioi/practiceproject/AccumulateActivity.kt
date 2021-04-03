@@ -18,8 +18,8 @@ class AccumulateActivity : AppCompatActivity() {
         summary_btn.setOnClickListener {
             startActivity(Intent(this, SummaryActivity::class.java))
         }
-        predic_btn.setOnClickListener {
-            startActivity(Intent(this, PredictionActivity::class.java))
+        new_btn.setOnClickListener {
+            startActivity(Intent(this, NewActivity::class.java))
         }
         precaution_btn.setOnClickListener {
             startActivity(Intent(this, PrecautionActivity::class.java))
@@ -41,9 +41,6 @@ class AccumulateActivity : AppCompatActivity() {
                 }
             }, year, month, date)
             dlg.show()
-        }
-        new_act_btn.setOnClickListener {
-            startActivity(Intent(this, NewActivity::class.java))
         }
         XmlParsingTask().execute()
 
