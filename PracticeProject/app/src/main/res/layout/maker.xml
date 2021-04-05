@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:padding="3dp"
-            android:background="@drawable/radius_left">
+            android:background="@drawable/pink_radius">
 
             <TextView
                 android:layout_width="0dp"

@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:paddingTop="5dp"
         android:orientation="vertical">
 
         <TableLayout
@@ -25,7 +25,7 @@
                     android:text="정의" />
                 <TextView
                     android:id="@+id/justice"
-                    android:text="2019년 12월 중국 우한에서 처음 발생한 뒤 전 세계로 확산된, 새로운 유형의 코로나바이러스에 의한 호흡기 감염질환. 더보기"
+                    android:text="2019년 12월 중국 우한에서 처음 발생한 뒤 전 세계로 확산된,  새로운 유형의 코로나바이러스에 의한 호흡기 감염질환. 더보기"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
@@ -45,7 +45,7 @@
                     android:text="검사" />
                 <TextView
                     android:id="@+id/check"
-                    android:text="필수검체는 상기도 검체이며, 하기도 검체는 가래가 있는 환자에서 채취. 검체는 의사, 간호사, 임상병리사가 지정된 장소(선별진료소 등)에서 채취함. 더보기 "
+                    android:text="필수검체는 상기도 검체이며, 하기도 검체는 가래가 있는 환자에서 채취. 검체는 의사, 간호사, 임상병리사가 지정된 장소\n(선별진료소 등)에서 채취함. 더보기 "
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
@@ -56,7 +56,7 @@
                     android:text="백신" />
                 <TextView
                     android:id="@+id/treatment"
-                    android:text="전 국민을 대상으로 접종하되, 접종순서 및 백신의 공급 상황에 맞춰 차례대로 접종. \n백신종류별 특성, 안전성 및 주의사항"
+                    android:text="전 국민을 대상으로 접종하되, 접종순서 및 백신의 공급 상황에 맞춰 차례대로 접종. 백신종류별 특성, 안전성 및 주의사항"
                     android:width="0dp"
                     android:textColor="#000000"/>
             </TableRow>
@@ -75,8 +75,7 @@
 
             <TableRow>
                 <TextView
-                    android:text="관련정보"
-                    android:layout_marginRight="10dp"/>
+                    android:text="관련정보" />
                 <TextView
                     android:id="@+id/information"
                     android:text="보도자료, 최신뉴스, SNU 팩트체크, 대응수칙, \n전자출입명부 안내, 네이버 QR체크인 안내"
@@ -95,7 +94,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/radius_left"
+                android:background="@drawable/pink_radius"
                 android:text="선별 진료소"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -113,7 +112,7 @@
                 android:text="정부지원 모음"
                 android:textStyle="bold"
                 android:id="@+id/government_support"
-                android:background="@drawable/radius_left"/>
+                android:background="@drawable/pink_radius"/>
 
             <View
                 android:layout_width="1dp"
@@ -128,26 +127,29 @@
                 android:text="코로나19예방접종"
                 android:textStyle="bold"
                 android:id="@+id/vaccination"
-                android:background="@drawable/radius_left"/>
+                android:background="@drawable/pink_radius"/>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="코로나19 감염이 의심되면 즉시 보건소 및 콜센터(전화 1339)에 신고바랍니다."
-                android:padding="20dp"/>
+                android:textStyle="bold"
+                android:padding="25dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/source"
-                android:text="출처   중앙재난안전대책본부, 중앙사고수습본부, \n           중앙방역대책본부, Johns Hopkins CSSE"
-                android:layout_marginTop="-25dp"
-                android:padding="20dp"/>
+                android:text="출처      중앙재난안전대책본부, 중앙사고수습본부, \n              중앙방역대책본부, Johns Hopkins CSSE"
+                android:textStyle="bold"
+                android:layout_marginTop="-30dp"
+                android:padding="25dp"/>
 
         </LinearLayout>
 
@@ -176,16 +178,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="현황"
+            android:text="누적확진"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/predic_btn"
+            android:id="@+id/new_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="예상"
+            android:text="신규확진"
             android:textSize="20dp" />
 
         <TextView

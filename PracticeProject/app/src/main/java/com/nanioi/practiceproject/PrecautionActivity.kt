@@ -4,7 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.util.Linkify
-import kotlinx.android.synthetic.main.activity_precaution.*
+import kotlinx.android.synthetic.main.activity_precaution.accumulate_btn
+import kotlinx.android.synthetic.main.activity_precaution.new_btn
+import kotlinx.android.synthetic.main.activity_precaution.source
+import kotlinx.android.synthetic.main.activity_precaution.summary_btn
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -19,8 +22,8 @@ class PrecautionActivity : AppCompatActivity() {
         accumulate_btn.setOnClickListener {
             startActivity(Intent(this,AccumulateActivity::class.java))
         }
-        predic_btn.setOnClickListener {
-            startActivity(Intent(this, PredictionActivity::class.java))
+        new_btn.setOnClickListener {
+            startActivity(Intent(this,NewActivity::class.java))
         }
 
         val transform = Linkify.TransformFilter(object : Linkify.TransformFilter, (Matcher, String) -> String {

@@ -13,14 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeProject"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PredictionActivity"></activity>
-        <activity android:name=".PrecautionActivity" />
+
+        <activity android:name=".PrecautionActivity"></activity>
         <activity android:name=".NewActivity" />
         <activity android:name=".AccumulateActivity" />
         <activity android:name=".SummaryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

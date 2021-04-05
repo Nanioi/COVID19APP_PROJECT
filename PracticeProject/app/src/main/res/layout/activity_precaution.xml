@@ -28,7 +28,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="20dp"
                 android:background="#AEABAB"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -120,22 +120,26 @@
                     android:layout_marginTop="3dp"
                     android:text=" 6. 국내 코로나19 유행지역에서는 외출, 타지역 방문을 자제하고 격리자는 의료인, 방역당국의 지시 철저히 따르기" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="코로나19 감염이 의심되면 즉시 보건소 및 콜센터 (전화 1339)에 신고바랍니다." />
+                    android:text="코로나19 감염이 의심되면 즉시 보건소 및 콜센터 (전화 1339)에 신고바랍니다."
+                    android:textStyle="bold"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/source"
                     android:layout_marginTop="15dp"
                     android:text="출처        중앙재난안전대책본부, 중앙사고수습본부, \n                중앙방역대책본부, Johns Hopkins CSSE"
+                    android:textStyle="bold"
                     />
 
             </LinearLayout>
@@ -167,16 +171,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="현황"
+            android:text="누적확진"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/predic_btn"
+            android:id="@+id/new_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="예상"
+            android:text="신규확진"
             android:textSize="20dp" />
 
         <TextView
