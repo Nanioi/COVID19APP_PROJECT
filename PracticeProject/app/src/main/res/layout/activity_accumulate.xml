@@ -9,160 +9,194 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="30dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="30dp">
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="145dp"
             android:layout_marginBottom="20dp"
+            android:columnCount="1"
             android:orientation="horizontal"
-            android:rowCount="2"
-            android:columnCount="1">
+            android:rowCount="2">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/radius_gray"
-                    android:layout_marginRight="5dp">
+                    android:background="@drawable/radius_gray">
+
                     <TextView
-                        android:layout_width="100dp"
+                        android:layout_width="90dp"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
                         android:gravity="center"
-                        android:textSize="20dp"
-                        android:text="확진환자"/>
+                        android:text="확진환자"
+                        android:textSize="17sp"
+                        tools:ignore="HardcodedText" />
+
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:id="@+id/decide"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="2"
                             android:gravity="center"
-                            android:textColor="#074BF6" />
+                            android:textColor="#074BF6"
+                            tools:text="100000" />
+
                         <TextView
                             android:id="@+id/decide_new"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="#E84040" />
+                            android:textColor="#E84040"
+                            tools:text="+542" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/radius_gray">
+
                     <TextView
-                        android:layout_width="100dp"
+                        android:layout_width="92dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:textSize="20dp"
-                        android:text="검사중"/>
+                        android:text="검사중"
+                        android:textSize="17sp"
+                        tools:ignore="HardcodedText" />
+
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:id="@+id/exam"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="2"
                             android:gravity="center"
-                            android:textColor="#074BF6" />
+                            android:textColor="#074BF6"
+                            tools:text="20000" />
+
                         <TextView
                             android:id="@+id/exam_new"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="#E84040" />
+                            android:textColor="#E84040"
+                            tools:text="+86" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/radius_gray"
-                    android:layout_marginRight="5dp">
+                    android:background="@drawable/radius_gray">
+
                     <TextView
-                        android:layout_width="100dp"
+                        android:layout_width="90dp"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
                         android:gravity="center"
-                        android:textSize="20dp"
-                        android:text="격리해제"/>
+                        android:text="격리해제"
+                        android:textSize="17sp"
+                        tools:ignore="HardcodedText" />
 
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:id="@+id/clear"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="2"
                             android:gravity="center"
-                            android:textColor="#074BF6" />
+                            android:textColor="#074BF6"
+                            tools:text="25655" />
+
                         <TextView
                             android:id="@+id/clear_new"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="#E84040" />
+                            android:textColor="#E84040"
+                            tools:text="+356" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/radius_gray">
+
                     <TextView
-                        android:layout_width="100dp"
+                        android:layout_width="92dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:textSize="20dp"
-                        android:text="사망자"/>
+                        android:text="사망자"
+                        android:textSize="17sp"
+                        tools:ignore="HardcodedText" />
+
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="80sp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:id="@+id/death"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="2"
                             android:gravity="center"
-                            android:textColor="#074BF6" />
+                            android:textColor="#074BF6"
+                            tools:text="1759" />
+
                         <TextView
                             android:id="@+id/death_new"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="#E84040" />
+                            android:textColor="#E84040"
+                            tools:text="+1" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -171,30 +205,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="25dp">
+            android:layout_marginBottom="25dp"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="2"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:background="@drawable/red_border">
+                android:layout_weight="2"
+                android:background="@drawable/red_border"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:paddingEnd="-20dp"
                     android:text="집계기준"
-                    android:paddingRight="-20dp"
                     android:textColor="#727273"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
                 <LinearLayout
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
+                    android:orientation="vertical"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:orientation="vertical">
+                    android:paddingBottom="8dp">
+
                     <TextView
                         android:id="@+id/state_dt"
                         android:layout_width="match_parent"
@@ -202,7 +239,9 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="#324EED"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:text="20210329" />
+
                     <TextView
                         android:id="@+id/state_time"
                         android:layout_width="match_parent"
@@ -210,7 +249,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="#324EED"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:text="00:00" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -222,19 +262,20 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="@drawable/red_radius"
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/calendar_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/calendar_btn"
                     android:background="#00ff0000"
+                    android:text="날짜설정"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
-                    android:text="날짜설정" />
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -252,7 +293,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="#D13B52"
+        android:background="@color/light_red"
         android:orientation="horizontal">
 
         <TextView
@@ -262,7 +303,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="개요"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
 
         <TextView
             android:id="@+id/accumulate_btn"
@@ -271,7 +314,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="누적확진"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
 
         <TextView
             android:id="@+id/new_btn"
@@ -280,7 +325,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="신규확진"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
 
         <TextView
             android:id="@+id/precaution_btn"
@@ -289,7 +336,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="예방수칙"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
     </LinearLayout>
 
 </RelativeLayout>

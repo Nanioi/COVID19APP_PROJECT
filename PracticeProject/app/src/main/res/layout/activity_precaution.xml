@@ -23,50 +23,63 @@
                 android:layout_marginBottom="15dp"
                 android:text="국민 예방수칙"
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/custom_black"
+                tools:ignore="HardcodedText,SpUsage" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:background="#AEABAB"
+                android:background="@drawable/radius_gray"
                 android:orientation="vertical"
                 android:padding="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" 1. 흐르는 물에 비누로 꼼꼼하게 손씻기" />
+                    android:text=" 1. 흐르는 물에 비누로 꼼꼼하게 손씻기"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/custom_black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:text=" 2. 기침이나 재채기할 때 옷소매로 입과 코 가리기" />
+                    android:textColor="@color/custom_black"
+                    android:text=" 2. 기침이나 재채기할 때 옷소매로 입과 코 가리기"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:text=" 3. 씻지 않은 손으로 눈,코,입 만지지 않기" />
+                    android:textColor="@color/custom_black"
+                    android:text=" 3. 씻지 않은 손으로 눈,코,입 만지지 않기"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:text=" 4. 발열, 호흡기 증상자와의 접촉 피하기" />
+                    android:textColor="@color/custom_black"
+                    android:text=" 4. 발열, 호흡기 증상자와의 접촉 피하기"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:text=" 5. 의료기관 방문 시 마스크 착용하기 " />
+                    android:textColor="@color/custom_black"
+                    android:text=" 5. 의료기관 방문 시 마스크 착용하기 "
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:text=" 6. 사람 많은 곳 방문 자제하" />
+                    android:text=" 6. 사람 많은 곳 방문 자제하"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <TextView
@@ -75,30 +88,38 @@
                 android:layout_marginBottom="15dp"
                 android:text="유상증상자 예방수칙"
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textColor="@color/custom_black"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,SpUsage" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#AEABAB"
+                android:background="@drawable/radius_gray"
                 android:orientation="vertical"
                 android:padding="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" 1. 등교나 출근을 하지 않고 외출 자제하기" />
+                    android:text=" 1. 등교나 출근을 하지 않고 외출 자제하기"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/custom_black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:text=" 2. 3~4일 경과를 관찰하며 집에서 충분히 휴식 취하기" />
+                    android:text=" 2. 3~4일 경과를 관찰하며 집에서 충분히 휴식 취하기"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/custom_black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/custom_black"
                     android:text=" 3. 38도 이상 고열이 지속되거나 증상이 심해질 경우
                     콜센터(1339, 지역번호+120), 관할 보건소 문의 및 선별진료소 우선 방문 후 진료받기" />
 
@@ -106,18 +127,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/custom_black"
                     android:text=" 4. 의료기관 방문 시 마스크 착용 및 자차 이용하기" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/custom_black"
                     android:text=" 5. 진료 의료진에게 해외여행력 및 호흡기 증상자와의 접촉여부 알리기 " />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/custom_black"
                     android:text=" 6. 국내 코로나19 유행지역에서는 외출, 타지역 방문을 자제하고 격리자는 의료인, 방역당국의 지시 철저히 따르기" />
             </LinearLayout>
 
@@ -132,7 +159,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="코로나19 감염이 의심되면 즉시 보건소 및 콜센터 (전화 1339)에 신고바랍니다."
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -140,7 +168,7 @@
                     android:layout_marginTop="15dp"
                     android:text="출처        중앙재난안전대책본부, 중앙사고수습본부, \n                중앙방역대책본부, Johns Hopkins CSSE"
                     android:textStyle="bold"
-                    />
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -153,7 +181,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="#D13B52"
+        android:background="@color/light_red"
         android:orientation="horizontal">
 
         <TextView
@@ -162,8 +190,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="@color/white"
             android:text="개요"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
 
         <TextView
             android:id="@+id/accumulate_btn"
@@ -171,8 +201,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="@color/white"
             android:text="누적확진"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
 
         <TextView
             android:id="@+id/new_btn"
@@ -180,8 +212,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="@color/white"
             android:text="신규확진"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
 
         <TextView
             android:id="@+id/precaution_btn"
@@ -190,8 +224,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="예방수칙"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
     </LinearLayout>
-
 
 </RelativeLayout>
