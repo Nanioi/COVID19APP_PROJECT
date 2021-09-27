@@ -1,6 +1,7 @@
 # COVID19APP_PROJECT
 ## COVID-19 발생 현황
-##### - 공공데이터 API 이용, Retrofit, XML Parsing, LineChart, BarChart, MarkView, Linkify, font-family, TableLayout, GridLayout
+#### 공공데이터 API 이용, Retrofit, XML Parsing, TableLayout, GridLayout
+#### LineChart, BarChart, MarkView, Linkify, font-family
 
 #### - 개요
 <img src="https://user-images.githubusercontent.com/52556870/114346084-d0c9f800-9b9d-11eb-9e21-866f4c43edec.jpeg" width="200">
