@@ -1,5 +1,5 @@
 ## COVID-19 발생 현황 Application
-### 2021.02.10 ~ 2021.02.27 
+### 2021.02.10 ~ 2021.02.27 개인 프로젝트
 #### 공공데이터 API 이용, Retrofit, XML Parsing, TableLayout, GridLayout
 #### LineChart, BarChart, MarkView, Linkify, font-family
 
