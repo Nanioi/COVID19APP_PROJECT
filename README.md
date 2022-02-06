@@ -1,8 +1,7 @@
 ## COVID-19 발생 현황 Application
 ### 2021.02.10 ~ 2021.02.27 개인 프로젝트
-#### 공공데이터 API 이용, Retrofit, XML Parsing, TableLayout, GridLayout
-#### LineChart, BarChart, MarkView, Linkify, font-family
 
+### 🎈 기능소개 🎈
 #### - 개요
 <img src="https://user-images.githubusercontent.com/52556870/114346084-d0c9f800-9b9d-11eb-9e21-866f4c43edec.jpeg" width="200">
 
@@ -26,3 +25,7 @@
 <img src="https://user-images.githubusercontent.com/52556870/114346104-d9223300-9b9d-11eb-8c0e-cd2da89ec952.jpeg" width="200">
 
 
+### 🛠 Tech Stack
+#### Retrofit, XML Parsing - 공공데이터 API 이용
+#### TableLayout, GridLayout, DatePicker, Linkify, font-family, MarkView
+#### MPAndroidChart - LineChart, BarChart 
